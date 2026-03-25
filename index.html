@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ananya Sood — Systems Builder. Creative Director. Founder.</title>
+  <meta name="description"
+    content="Portfolio of Ananya Sood — working across AI systems, automation, security, and high-end streetwear culture. Founder & Creative Director of RFLXNS." />
+  <meta name="theme-color" content="#0a0a0a" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,301,701,300,501,401,901,400&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css?v=red-theme" />
+  <link rel="stylesheet" href="about.css?v=integrated" />
+</head>
+
+<body>
+  <!-- Niche Loading Bar -->
+  <div class="loader-overlay">
+    <div class="loader-content">
+      <div class="loader-text"></div>
+    </div>
+    <div class="loader-bottom">
+      <div class="loader-track">
+        <div class="loader-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Intro Animation Overlay -->
+  <div class="intro-overlay">
+    <div class="intro-container">
+      <!-- Text Layer -->
+      <div class="intro-text-container">
+        <h1 class="intro-word word-namaste">
+          <span class="char">न</span><span class="char">म</span><span class="char">स्</span><span class="char">ते</span>
+        </h1>
+        <h1 class="intro-word word-hello">
+          <span class="char">H</span><span class="char">E</span><span class="char">L</span><span
+            class="char">L</span><span class="char">O</span><span class="char spacer">&nbsp;</span><span
+            class="char">!</span>
+        </h1>
+        <h1 class="intro-word word-hola">
+          <span class="char">¡</span><span class="char">H</span><span class="char">O</span><span
+            class="char">L</span><span class="char">A</span><span class="char">!</span>
+        </h1>
+        <h1 class="intro-word word-punjabi">
+          <span class="char">ਸ</span><span class="char">ਤਿ</span><span class="char spacer">&nbsp;</span><span
+            class="char">ਸ੍ਰੀ</span><span class="char spacer">&nbsp;</span><span class="char">ਅ</span><span
+            class="char">ਕਾ</span><span class="char">ਲ</span>
+        </h1>
+        <h1 class="intro-word word-bonjour">
+          <span class="char">B</span><span class="char">O</span><span class="char">N</span><span
+            class="char">J</span><span class="char">O</span><span class="char">U</span><span class="char">R</span>
+        </h1>
+      </div>
+
+      <!-- Technical Grid Overlay -->
+      <div class="intro-tech-grid">
+        <div class="tech-line horizontal"></div>
+        <div class="tech-line vertical"></div>
+        <div class="tech-circle tl"></div>
+        <div class="tech-circle tr"></div>
+        <div class="tech-circle bl"></div>
+        <div class="tech-circle br"></div>
+      </div>
+
+      <!-- Swipe Indicator -->
+      <div class="intro-swipe-indicator">
+        <div class="pulse-wave"></div>
+        <span>SWIPE UP</span>
+        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- SVG Filter for Liquid Motion -->
+  <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg"
+    version="1.1">
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur" />
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+        <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav__container">
+      <a href="#hero" class="nav__logo">AS</a>
+      <div class="nav__links">
+        <a href="#about-hero" class="nav__link">About</a>
+        <a href="#capabilities" class="nav__link">Skills</a>
+        <a href="#work" class="nav__link">Projects</a>
+        <a href="#training" class="nav__link">Training</a>
+        <a href="#certificates" class="nav__link">Certifications</a>
+        <a href="#achievements" class="nav__link">Achievements</a>
+        <a href="#education" class="nav__link">Education</a>
+        <a href="#contact" class="nav__link">Contact</a>
+        <a href="https://drive.google.com/file/d/1HHIxkj4AtkhC8Rb6pGpQSkyWmYk_Lote/view?usp=sharing" target="_blank" rel="noopener" class="nav__resume-btn">RESUME</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Three.js Canvas (Hero background) -->
+  <canvas id="hero-canvas"></canvas>
+
+  <!-- Top Spacer for Scroll Bounce/Drag -->
+  <div class="top-spacer"></div>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="hero" class="section hero">
+    <div class="hero__grid">
+      <!-- Left Column: Console -->
+      <div class="hero__col-console" data-reveal>
+        <div class="console-frame">
+          <div class="console-header">
+            <h1 class="console-title">
+              <span class="console-line">ANANYA</span>
+              <span class="console-line">SOOD</span>
+            </h1>
+          </div>
+
+          <div class="console-body">
+            <p class="console-sub">
+              Systems Builder.<br>
+              Creative Director.<br>
+              Founder.
+            </p>
+
+            <nav class="console-nav">
+              <ul class="console-list">
+                <li><a href="#about-hero" class="console-link"><span class="console-item">About</span> <span class="console-num">I</span></a></li>
+                <li><a href="#capabilities" class="console-link"><span class="console-item">Skills</span> <span class="console-num">II</span></a></li>
+                <li><a href="#work" class="console-link"><span class="console-item">Projects</span> <span class="console-num">III</span></a></li>
+                <li><a href="#training" class="console-link"><span class="console-item">Training</span> <span class="console-num">IV</span></a></li>
+                <li><a href="#certificates" class="console-link"><span class="console-item">Certifications</span> <span class="console-num">V</span></a></li>
+                <li><a href="#achievements" class="console-link"><span class="console-item">Achievements</span> <span class="console-num">VI</span></a></li>
+                <li><a href="#education" class="console-link"><span class="console-item">Education</span> <span class="console-num">VII</span></a></li>
+                <li><a href="#contact" class="console-link"><span class="console-item">Contact</span> <span class="console-num">VIII</span></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Personal Image -->
+      <div class="hero__col-image" data-reveal>
+        <div class="hero__image-wrapper">
+          <img src="images/ananya-sood.jpg" alt="Ananya Sood" class="hero__personal-img" />
+          
+          <!-- Floating Tags -->
+          <div class="floating-tag tag-ds">Data Scientist</div>
+          <div class="floating-tag tag-ml">Machine Learning</div>
+          <div class="floating-tag tag-py">Python</div>
+          <div class="floating-tag tag-da">Data Analysis</div>
+          <div class="floating-tag tag-ai">AI Systems</div>
+        </div>
+        <p class="hero__image-desc">Building systems. Designing identity. Creating with intent.</p>
+      </div>
+    </div>
+    <!-- Floating geometric accent shapes (CSS driven) -->
+    <div class="hero__shape hero__shape--1" aria-hidden="true"></div>
+    <div class="hero__shape hero__shape--2" aria-hidden="true"></div>
+    <div class="hero__dot-grid" aria-hidden="true"></div>
+  </section>
+
+  <!-- ===================== ABOUT (Full Integrated Section) ===================== -->
+  <section id="about-hero" class="about-hero" style="padding-bottom: 60px;">
+    <span class="about-hero__label about-reveal">The Person Behind the Work</span>
+    <h1 class="about-hero__name about-reveal">ANANYA <span>SOOD</span></h1>
+    
+    <div class="about-hero__bio" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: clamp(20px, 4vw, 40px); max-width: 1300px; text-align: left; margin-top: 20px;">
+      
+      <div class="about-col">
+        <p class="about-hero__statement about-reveal" style="margin-bottom: 24px; max-width: 100%;">
+          I’m a Data Science student driven by curiosity—understanding how systems work, how patterns emerge, and how ideas translate into something meaningful. My work sits at the intersection of technology, design, and identity, where logic meets creativity.
+        </p>
+        <p class="about-hero__statement about-reveal" style="margin-bottom: 24px; max-width: 100%;">
+          On the technical side, I build data-driven solutions, explore machine learning, and design structured approaches to solve real-world problems—focusing on turning data into insight and action.
+        </p>
+        <p class="about-hero__statement about-reveal" style="max-width: 100%;">
+          Alongside this, I founded RFLXNS, an independent streetwear label centered on reflection and identity. It’s where I explore creative direction, visual storytelling, and brand building—from concept to execution.
+        </p>
+      </div>
+
+      <div class="about-col">
+        <p class="about-hero__statement about-reveal" style="margin-bottom: 24px; max-width: 100%;">
+          I also take on leadership roles beyond individual work. As a Senior Advisory Member at the Student Career Committee under the School of Computer Science and Engineering, I contribute to student growth and career initiatives. As Head of Administration at OASIS, I manage operations and execution across student-led activities.
+        </p>
+        <p class="about-hero__statement about-reveal" style="max-width: 100%;">
+          I’m constantly exploring how domains connect—how data informs design, how systems shape experiences, and how ideas evolve into impact.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="about-hero__scroll" style="position: relative; margin-top: 60px; transform: none; bottom: auto; left: auto;">
+      <span>Scroll</span>
+      <div class="about-hero__scroll-line"></div>
+    </div>
+  </section>
+
+
+
+  <!-- ===================== SKILLS & TECHNOLOGIES ===================== -->
+  <section id="capabilities" class="section capabilities">
+    <h2 class="section__heading" data-split>Skills</h2>
+    <div class="capabilities__group" data-reveal>
+      <h3 class="capabilities__category">Languages</h3>
+      <div class="capabilities__badges">
+        <span class="badge" data-ag>C++</span>
+        <span class="badge" data-ag>JavaScript</span>
+        <span class="badge" data-ag>C</span>
+        <span class="badge" data-ag>Python</span>
+      </div>
+    </div>
+    <div class="capabilities__group" data-reveal>
+      <h3 class="capabilities__category">Frameworks</h3>
+      <div class="capabilities__badges">
+        <span class="badge" data-ag>HTML &amp; CSS</span>
+        <span class="badge" data-ag>React</span>
+      </div>
+    </div>
+    <div class="capabilities__group" data-reveal>
+      <h3 class="capabilities__category">Tools/Platforms</h3>
+      <div class="capabilities__badges">
+        <span class="badge" data-ag>MySQL</span>
+        <span class="badge" data-ag>MongoDB</span>
+      </div>
+    </div>
+    <div class="capabilities__group" data-reveal>
+      <h3 class="capabilities__category">Soft Skills</h3>
+      <div class="capabilities__badges">
+        <span class="badge" data-ag>Problem-Solving</span>
+        <span class="badge" data-ag>Team Player</span>
+        <span class="badge" data-ag>Time Management</span>
+        <span class="badge" data-ag>Adaptability</span>
+        <span class="badge" data-ag>Leadership</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS ===================== -->
+  <section id="work" class="section work">
+    <div class="work__container">
+      <h2 class="section__heading" data-split>Projects</h2>
+      <div class="work__grid">
+        <!-- Card 1 -->
+        <article class="work__card" data-ag>
+          <div class="work__card-icon">
+            <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="40" cy="40" r="18" />
+              <circle cx="40" cy="40" r="30" opacity=".4" />
+              <line x1="40" y1="10" x2="40" y2="22" />
+              <line x1="40" y1="58" x2="40" y2="70" />
+              <line x1="10" y1="40" x2="22" y2="40" />
+              <line x1="58" y1="40" x2="70" y2="40" />
+              <circle cx="40" cy="40" r="6" fill="currentColor" />
+              <line x1="26" y1="26" x2="33" y2="33" opacity=".5" />
+              <line x1="47" y1="47" x2="54" y2="54" opacity=".5" />
+              <line x1="54" y1="26" x2="47" y2="33" opacity=".5" />
+              <line x1="33" y1="47" x2="26" y2="54" opacity=".5" />
+            </svg>
+          </div>
+          <h3 class="work__card-title">Emotion Detection from Text <a href="https://github.com/ananyaasood" target="_blank" style="color: inherit; text-decoration: underline; font-size: 0.8em; margin-left: 8px;">Github</a></h3>
+          <p class="work__card-desc">Machine-learning pipeline predicting joy, anger, sadness, and surprise from text.</p>
+          <div class="work__card-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Scikit-learn</span>
+            <span class="tag">NLP</span>
+          </div>
+          <div class="work__card-detail">
+            <p>Developed an explicit emotion-detection model achieving over 75% accuracy. Implemented using Numpy, Pandas, Scikit-learn, TF-IDF vectorization, and NLP preprocessing to enable efficient real-time text emotion anaylsis.
+            </p>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="work__card" data-ag>
+          <div class="work__card-icon">
+            <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="10" y="30" width="16" height="16" rx="3" />
+              <rect x="32" y="14" width="16" height="16" rx="3" />
+              <rect x="32" y="46" width="16" height="16" rx="3" />
+              <rect x="54" y="30" width="16" height="16" rx="3" />
+              <line x1="26" y1="38" x2="32" y2="38" />
+              <line x1="48" y1="22" x2="54" y2="30" />
+              <line x1="48" y1="54" x2="54" y2="46" />
+              <line x1="40" y1="30" x2="40" y2="46" opacity=".4" />
+            </svg>
+          </div>
+          <h3 class="work__card-title">PawsFinder - Pet Adoption Application <a href="#" target="_blank" style="color: inherit; text-decoration: underline; font-size: 0.8em; margin-left: 8px;">Live</a></h3>
+          <p class="work__card-desc">Tinder-style pet adoption system matching users with suitable pets via conversational interaction.</p>
+          <div class="work__card-tags">
+            <span class="tag">Python</span>
+            <span class="tag">NLP Chatbot</span>
+            <span class="tag">AI Workflows</span>
+          </div>
+          <div class="work__card-detail">
+            <p>Built an intelligent application using Python, integrating NLP-driven chatbot logic, user-profile modeling, and pet-database handling. Improved match relevance by 82% and reduced user search time with real-time suggestions.</p>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="work__card" data-ag>
+          <div class="work__card-icon">
+            <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="1.5">
+              <polygon points="40,12 60,28 55,52 25,52 20,28" />
+              <polygon points="40,20 52,32 49,48 31,48 28,32" opacity=".4" />
+              <line x1="40" y1="52" x2="40" y2="68" />
+              <line x1="30" y1="68" x2="50" y2="68" />
+            </svg>
+          </div>
+          <h3 class="work__card-title">RFLXNS — High-End Streetwear Label</h3>
+          <p class="work__card-desc">Independent culture-first apparel brand exploring identity, reflection, and
+            selective
+            fashion narratives.</p>
+          <div class="work__card-tags">
+            <span class="tag">Fashion</span>
+            <span class="tag">Culture</span>
+            <span class="tag">Identity</span>
+          </div>
+          <div class="work__card-detail">
+            <p>Co-founded and creatively directed RFLXNS (Reflections-Luxe), a high-end independent streetwear label.
+              Built brand identity, visual language, collection concepts, and physical launch presence from zero.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== RFLXNS CREATIVE DIRECTOR ===================== -->
+  <section id="rflxns" class="section rflxns">
+    <div class="rflxns__bg" aria-hidden="true">
+      <img src="images/rflxns-reflections-bg.png" alt="" class="rflxns__bg-img" />
+    </div>
+    <div class="rflxns__content">
+      <div class="rflxns__text">
+        <h2 class="section__heading section__heading--light" data-split>Creative Director</h2>
+        <h2 class="section__heading section__heading--light" style="color: var(--accent-red); margin-top: -0.2em;"
+          data-split>RFLXNS</h2>
+        <div class="rflxns__logo-wrap" data-reveal>
+          <img src="images/rflxns-logo.png" alt="RFLXNS Logo" class="rflxns__logo" />
+        </div>
+        <p class="rflxns__label" data-reveal>Reflections-Luxe</p>
+        <p class="rflxns__desc" data-reveal>
+          Creative Director and Co-Founder of RFLXNS, a high-end independent streetwear label positioned beyond mass
+          culture.
+        </p>
+        <p class="rflxns__desc" data-reveal>
+          RFLXNS explores identity and self-perception through limited garments and visual symbolism.
+          Built as a bootstrap brand emphasizing scarcity, intention, and elevated streetwear minimalism.
+        </p>
+        <p class="rflxns__accent" data-reveal>Not for the masses.</p>
+      </div>
+      <div class="rflxns__visual">
+        <div class="rflxns__img-wrap" data-reveal>
+          <img src="images/rflxns-workspace.jpg" alt="RFLXNS design workspace — garment sketches and creative direction"
+            class="rflxns__img" loading="lazy" />
+        </div>
+        <div class="rflxns__directions" data-reveal>
+          <div class="rflxns__dir-item">Brand worldbuilding &amp; philosophy</div>
+          <div class="rflxns__dir-item">Visual identity &amp; campaign language</div>
+          <div class="rflxns__dir-item">Collection themes &amp; garment concepts</div>
+          <div class="rflxns__dir-item">Editorial and launch visuals</div>
+          <div class="rflxns__dir-item">Brand storytelling systems</div>
+          <div class="rflxns__dir-item">Physical presentation &amp; expo experience</div>
+        </div>
+      </div>
+      <p class="rflxns__tagline" data-reveal>
+        RFLXNS exists at the intersection of fashion, psychology, and culture.
+      </p>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- ===================== TRAINING ===================== -->
+  <section id="training" class="section">
+    <div class="cert-heading-wrapper" data-reveal>
+      <h2 class="cert-heading">Training</h2>
+      <p class="cert-subheading">Hands-on programs that built my practical foundation in Machine Learning.</p>
+    </div>
+
+    <div class="training-card" data-ag>
+      <div class="training-header">
+        <h3 class="training-title">Machine Learning Made Easy: From Basics To AI Application</h3>
+        <span class="training-date-pill">Jun '25 - Aug '25</span>
+      </div>
+      <div class="training-institution">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+          <polyline points="2 17 12 22 22 17"></polyline>
+          <polyline points="2 12 12 17 22 12"></polyline>
+        </svg>
+        Lovely Professional University (LPU)
+      </div>
+      <ul class="training-list">
+        <li>Gained practical training in core Machine Learning fundamentals, covering supervised &amp; unsupervised learning, data preprocessing, feature engineering, model evaluation, and real-world ML workflow.</li>
+        <li>Strengthened technical skills by building and optimizing ML models using Python (Numpy, Pandas, Scikit-learn), implementing algorithms such as Linear/Logistic Regression, Decision Trees, KNN, SVM, and Clustering.</li>
+        <li>Developed an end-to-end AI application, applying ML concepts for dataset handling, model training, hyperparameter tuning, and deployment-ready outputs.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== CERTIFICATIONS ===================== -->
+  <section id="certificates" class="section">
+    <div class="cert-heading-wrapper" data-reveal>
+      <h2 class="cert-heading">Certifications</h2>
+      <p class="cert-subheading">Recognized credentials from top institutions and platforms.</p>
+    </div>
+
+    <div class="cert-grid">
+      <!-- Card 1 -->
+      <div class="cert-card" data-ag>
+        <div class="cert-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+            <rect x="9" y="9" width="6" height="6"></rect>
+            <line x1="9" y1="1" x2="9" y2="4"></line>
+            <line x1="15" y1="1" x2="15" y2="4"></line>
+            <line x1="9" y1="20" x2="9" y2="23"></line>
+            <line x1="15" y1="20" x2="15" y2="23"></line>
+            <line x1="20" y1="9" x2="23" y2="9"></line>
+            <line x1="20" y1="14" x2="23" y2="14"></line>
+            <line x1="1" y1="9" x2="4" y2="9"></line>
+            <line x1="1" y1="14" x2="4" y2="14"></line>
+          </svg>
+        </div>
+        <div class="cert-content">
+          <div class="cert-platform">Infosys Springboard</div>
+          <h3 class="cert-title">Computational Theory: Language Principle &amp; Finite Automata</h3>
+          <div class="cert-date">Aug 2025</div>
+          <p class="cert-desc">Formal languages, finite automata, grammar theory and Turing machines.</p>
+          <a href="https://drive.google.com/file/d/1RAWNINGadXY1ElTg9drFlXY8Zwntjv6g/view?usp=drive_link" target="_blank" rel="noopener" class="cert-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+            View Certificate
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="cert-card" data-ag>
+        <div class="cert-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="10" rx="2"></rect>
+            <circle cx="12" cy="5" r="2"></circle>
+            <path d="M12 7v4"></path>
+            <line x1="8" y1="16" x2="8" y2="16"></line>
+            <line x1="16" y1="16" x2="16" y2="16"></line>
+          </svg>
+        </div>
+        <div class="cert-content">
+          <div class="cert-platform">AGI Scholars</div>
+          <h3 class="cert-title">15 Days Generative AI Foundations Course</h3>
+          <div class="cert-date">Mar 2024</div>
+          <p class="cert-desc">Generative AI concepts, prompt engineering, ChatGPT and practical AI tools.</p>
+          <a href="#" class="cert-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+            Verify Certificate
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="cert-card" data-ag>
+        <div class="cert-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+        </div>
+        <div class="cert-content">
+          <div class="cert-platform">Mindluster</div>
+          <h3 class="cert-title">Python Programming Language</h3>
+          <div class="cert-date">Feb 2024</div>
+          <p class="cert-desc">Python fundamentals, data structures, algorithms and practical scripting.</p>
+          <a href="https://drive.google.com/file/d/1S6yta0085t_iXUAEjXUGOiyfN2ZoYqCE/view?usp=drive_link" target="_blank" rel="noopener" class="cert-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+            View Certificate
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ACHIEVEMENTS ===================== -->
+  <section id="achievements" class="section">
+    <div class="cert-heading-wrapper" data-reveal>
+      <h2 class="cert-heading">Achievements</h2>
+      <p class="cert-subheading">Recognitions and contributions demonstrating leadership.</p>
+    </div>
+
+    <div class="cert-grid">
+      <!-- Card 1 -->
+      <div class="cert-card" data-ag>
+        <div class="cert-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+          </svg>
+        </div>
+        <div class="cert-content">
+          <div class="cert-platform">Student Placement Committee (CSE)</div>
+          <h3 class="cert-title">Certificate of Appreciation</h3>
+          <div class="cert-date">May 2025</div>
+          <p class="cert-desc">Recognized for valuable contribution and smooth event coordination.</p>
+        </div>
+      </div>
+      
+      <!-- Card 2 -->
+      <div class="cert-card" data-ag>
+        <div class="cert-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+        </div>
+        <div class="cert-content">
+          <div class="cert-platform">CyberFest 2024</div>
+          <h3 class="cert-title">Certificate of Coordination</h3>
+          <div class="cert-date">Nov 2024</div>
+          <p class="cert-desc">Recognized for coordinating a 2-day cyber bootcamp and 24-hour CTF with multiple industry partners.</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="cert-card" data-ag>
+        <div class="cert-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 11 12 14 22 4"></polyline>
+            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+          </svg>
+        </div>
+        <div class="cert-content">
+          <div class="cert-platform">OASIS</div>
+          <h3 class="cert-title">Certificate of Outstanding Leadership</h3>
+          <div class="cert-date">Leadership</div>
+          <p class="cert-desc">Recognized for exceptional valuable contributions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EDUCATION ===================== -->
+  <section id="education" class="section">
+    <div class="cert-heading-wrapper" data-reveal>
+      <h2 class="cert-heading">Education</h2>
+      <p class="cert-subheading">My academic background and qualifications.</p>
+    </div>
+
+    <div class="cert-grid">
+      <!-- Card 1 -->
+      <div class="cert-card" data-ag>
+        <div class="cert-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+          </svg>
+        </div>
+        <div class="cert-content">
+          <div class="cert-platform">Lovely Professional University | Phagwara, Punjab</div>
+          <h3 class="cert-title">Bachelor of Technology - Computer Science and Engineering</h3>
+          <div class="cert-date">Since Aug 2023</div>
+          <p class="cert-desc">CGPA: 7.0</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="cert-card" data-ag>
+        <div class="cert-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+          </svg>
+        </div>
+        <div class="cert-content">
+          <div class="cert-platform">Sr. Sec. School | Jawalamukhi, HP</div>
+          <h3 class="cert-title">Intermediate Qualification</h3>
+          <div class="cert-date">Apr 2021 - Mar 2023</div>
+          <p class="cert-desc">Achieved 85% in final assessment.</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="cert-card" data-ag>
+        <div class="cert-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+          </svg>
+        </div>
+        <div class="cert-content">
+          <div class="cert-platform">D.A.V. Public Sr. Sec. School | Jawalamukhi, HP</div>
+          <h3 class="cert-title">Matriculation Qualification</h3>
+          <div class="cert-date">Apr 2019 - Mar 2021</div>
+          <p class="cert-desc">Achieved 84% in final assessment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ===================== CONTACT / FOOTER ===================== -->
+  <footer id="contact" class="section contact">
+    <h2 class="section__heading" data-split>Get in Touch</h2>
+    <div class="contact__links">
+      <a href="mailto:soodananya618@gmail.com" class="contact__link ag-card" data-ag>
+        <span class="contact__label">Email</span>
+        <span class="contact__value">soodananya618@gmail.com</span>
+      </a>
+      <a href="https://instagram.com/rflxnsluxe" target="_blank" rel="noopener" class="contact__link ag-card" data-ag>
+        <span class="contact__label">Instagram</span>
+        <span class="contact__value">@rflxnsluxe</span>
+      </a>
+      <a href="https://github.com/ananyaasood" target="_blank" rel="noopener" class="contact__link ag-card" data-ag>
+        <span class="contact__label">GitHub</span>
+        <span class="contact__value">github.com/ananyaasood</span>
+      </a>
+    </div>
+    <p class="contact__location" data-reveal>Based out of the hills — Jammu &amp; Kashmir</p>
+    <p class="contact__copy">&copy; 2026 Ananya Sood. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
+  <script src="cloth-shader.js?v=3"></script>
+  <script src="script.js?v=red-theme"></script>
+</body>
+
+</html>
